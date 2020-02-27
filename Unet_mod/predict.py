@@ -80,6 +80,8 @@ def get_args():
                         help="Folder where to output your segmentation results")
     parser.add_argument('-c', '--channels', dest='channels', type=int, default=1,
                         help='Number of channels of the input images')
+    parser.add_argument('--gpu_ids', type=str, default='0',
+                        help='GPUs to use')
 
     return parser.parse_args()
 
@@ -108,13 +110,21 @@ def mask_to_image(mask):
 if __name__ == "__main__":
     args = get_args()
     Path(args.outfolder).mkdir(parents=True, exist_ok=True)
+    
+    str_ids = args.gpu_ids.split(',')
+    args.gpu_ids = []
+    for str_id in str_ids:
+        id = int(str_id)
+        if id >= 0:
+            args.gpu_ids.append(id)
+    if len(args.gpu_ids) > 0:
+        torch.cuda.set_device(args.gpu_ids[0])
+        
+    device = torch.device('cuda:{}'.format(args.gpu_ids[0])) if args.gpu_ids else torch.device('cpu')
+    logging.info(f'Using device {device}')
 
     net = UNet(n_channels=args.channels, n_classes=1)
-
     logging.info("Loading model {}".format(args.model))
-
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    logging.info(f'Using device {device}')
     net.to(device=device)
     net.load_state_dict(torch.load(args.model, map_location=device))
 
