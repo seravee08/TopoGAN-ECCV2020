@@ -1,7 +1,7 @@
 # TopoGAN
 
 TopoGAN is tested under Windows10 and ran on jupyter notebook with pytorch support.
-Project page (https://seravee08.github.io/TopoGAN-ECCV2020/)
+Project page (https://seravee08.github.io/TopoGAN-ECCV2020/)  
 Paper (https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480120.pdf)
 
 To run TopoGAN, you will need persistent homology computation that can output cycle information and critical points.
