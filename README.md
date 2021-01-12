@@ -63,7 +63,7 @@ The datasets are preprocessed and subsampled to have a smaller patch size and co
 The persistence diagrams of the training images should be pre-computed with the function "FileIO.compute_pd_save"
 An example is given in the Main.ipynb.
 
-### 5. Hyperparameters ###
+### 4. Hyperparameters ###
 The hyperparameters of TopoGAN are all defined in file: Archpool.ipynb.
 TopoGAN supports easy change of network architecture. The default architectures are DC GANs (index 2 and 3 in Archpool).
 TopoGAN works better with ResNet (also provided in Archpool).
