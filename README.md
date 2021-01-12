@@ -1,10 +1,23 @@
 # TopoGAN: A Topology-Aware Generative Adversarial Network #
 
 [**Fan Wang, Huidong Liu, Dimitris Samaras, Chao Chen, ECCV 2020.**]
-
-TopoGAN is tested under Windows10 and ran on jupyter notebook with pytorch support.  
 Project page (https://seravee08.github.io/TopoGAN-ECCV2020/)  
 Paper (https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480120.pdf)
+
+Most existing generative adversarial networks (GANs) focus on generating realistic images with regard to CNN-based image features, but fail to preserve the structural properties of real images. This can be fatal in applications where the underlying structure (e.g., neurons, vessels, membranes, road networks) of the image carries crucial semantic meaning. In this paper, we propose a novel GAN model that learns the topology of the real images, i.e., connectedness and loopy-ness. In particular, we introduce a new loss that bridges the gap between synthetic image distribution and real image distribution in the topological feature space. By optimizing this loss, the generator produces images with the same structural topology as real images. We also propose new GAN evaluation metrics that measure the topological realism of the synthetic images. We show in experiments that our method generates synthetic images with realistic topology. We also highlight the increased performance that our method brings to downstream tasks such as segmentation.
+
+<br/>
+<p align="center"> 
+<img src="TopoGAN_qualityres.png" alt="drawing" width="100%"  />
+</p>
+
+<p align="center"> 
+<img src="TopoGAN_framework.png" alt="drawing" width="60%"  />
+</p>
+
+### 1. Requirements ###
+
+TopoGAN is tested under Windows10 and ran on jupyter notebook with pytorch support.  
 
 To run TopoGAN, you will need persistent homology computation that can output cycle information and critical points.
 We provide a complied version used in the paper in the form of a python module under folder persis_lib_cpp.
