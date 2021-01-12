@@ -57,7 +57,7 @@ The datasets used in the paper are:
 - ISBI
 - Google Maps
 - Facades
-- Retina
+- Retina  
 The datasets are preprocessed and subsampled to have a smaller patch size and compatible form.
 The persistence diagrams of the training images should be pre-computed with the function "FileIO.compute_pd_save"
 An example is given in the Main.ipynb.
