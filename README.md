@@ -51,9 +51,18 @@ persis_lib_cpp. If you are interested to use it as a standalone module, import i
 - from persis_homo_optimal import *
 The defination of the interfaces are given in persis_lib_cpp/PersistenceComputer.h
 
+### 3. Datasets Download ###
+The datasets used in the paper are:
+- CREMI (https://cremi.org/data/)
+- ISBI
+- Google Maps
+- Facades
+- Retina
+The datasets are preprocessed and subsampled to have a smaller patch size and compatible form.
 The persistence diagrams of the training images should be pre-computed with the function "FileIO.compute_pd_save"
 An example is given in the Main.ipynb.
 
+### 5. Hyperparameters ###
 The hyperparameters of TopoGAN are all defined in file: Archpool.ipynb.
 TopoGAN supports easy change of network architecture. The default architectures are DC GANs (index 2 and 3 in Archpool).
 TopoGAN works better with ResNet (also provided in Archpool).
