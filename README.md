@@ -20,6 +20,15 @@ TopoGAN supports easy change of network architecture. The default architectures 
 TopoGAN works better with ResNet (also provided in Archpool).
 
 Some important hyperparameters are explained here:  
+return_advanced_params:  
+Topo_edge:  
+(1) target_topo_dimension: 1 for cycles (most cases), 0 for connected components  
+(2) topology_loss_weight: the weight of topology loss  
+(3) use_blind_force: use False  
+(3) project_2_dim: 0 (match birth, target_topo_dimension has to be 1), 1 (match death, target_topo_dimension has to be 0)  
+(4) image_watershed: image binarization threshold  
+(5) target_topo_threshold: the threshold to filter noisy topological strutures. If set too large, there could be nothing left (cause program error)  
+
 return_settings:  
 Basic:  
 (1) branch_name: the name of the folder where the logs are saved  
