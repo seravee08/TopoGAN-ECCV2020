@@ -89,6 +89,11 @@ Path:
 (2) data_path: the folder where there are training images  
 (3) pds_path: the folder where there are computed persistence diagrams  
 
+### 4. Linux version ###
+TopoGAN is currently tested and ran on Windows machine. The source of codes of TopoGAN can work under
+Linux environment with no problems. However, one of the essential modules, persis_homo_optimal, is not
+avaialbe for Linux at the moment. We are putting effort to port it into Liunx.
+
 ### Citation ###
     @inproceedings{wangtopogan, 
     author = {Wang, Fan and Liu, Huidong and Samaras, Dimitris and Chen, Chao}, 
