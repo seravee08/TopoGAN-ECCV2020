@@ -1,6 +1,6 @@
 # TopoGAN: A Topology-Aware Generative Adversarial Network #
 
-[**Fan Wang, Huidong Liu, Dimitris Samaras, Chao Chen, ECCV 2020.**]  
+**Fan Wang, Huidong Liu, Dimitris Samaras, Chao Chen, ECCV 2020.**  
 Project page (https://seravee08.github.io/TopoGAN-ECCV2020/)  
 Paper (https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480120.pdf)
 
