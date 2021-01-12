@@ -1,4 +1,6 @@
-# TopoGAN
+# TopoGAN: A Topology-Aware Generative Adversarial Network #
+
+[**Fan Wang, Huidong Liu, Dimitris Samaras, Chao Chen, ECCV 2020.**]
 
 TopoGAN is tested under Windows10 and ran on jupyter notebook with pytorch support.  
 Project page (https://seravee08.github.io/TopoGAN-ECCV2020/)  
