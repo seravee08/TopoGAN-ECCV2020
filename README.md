@@ -1,6 +1,6 @@
 # TopoGAN: A Topology-Aware Generative Adversarial Network #
 
-[**Fan Wang, Huidong Liu, Dimitris Samaras, Chao Chen, ECCV 2020.**]
+[**Fan Wang, Huidong Liu, Dimitris Samaras, Chao Chen, ECCV 2020.**]  
 Project page (https://seravee08.github.io/TopoGAN-ECCV2020/)  
 Paper (https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480120.pdf)
 
@@ -15,13 +15,37 @@ Most existing generative adversarial networks (GANs) focus on generating realist
 <img src="TopoGAN_framework.png" alt="drawing" width="60%"  />
 </p>
 
-### 1. Requirements ###
-
 TopoGAN is tested under Windows10 and ran on jupyter notebook with pytorch support.  
 
-To run TopoGAN, you will need persistent homology computation that can output cycle information and critical points.
-We provide a complied version used in the paper in the form of a python module under folder persis_lib_cpp.
-If you are interested to use it as a standalone module, import it with the following lines:
+### 1. Requirements ###
+TopoGAN requires following libraries to run:
+- argparse
+- shutil
+- pathlib
+- glob
+- cv2
+- os
+- numpy
+- torch
+- scipy
+- struct
+- PIL
+- torchvision
+- sys
+- time
+- random
+- matplotlib
+- skimage
+- pot
+- math
+- copy
+- persim
+- mpl_toolkits
+- cvxopt
+
+Besides above required libraries, you will need persistent homology computation that can output cycle information
+and critical points. We provide a complied version used in the paper in the form of a python module under folder
+persis_lib_cpp. If you are interested to use it as a standalone module, import it with the following lines:
 - import sys
 - sys.path.insert(0, './persis_lib_cpp')
 - from persis_homo_optimal import *
